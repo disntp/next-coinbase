@@ -8,9 +8,18 @@ export const ContextListProvider = (props) => {
   //   localStorage.getItem("doList").split(",")
   // }, []);
 
-  const [doList, setDoList] = useState(
-    (typeof window !== "undefined" &&
-      localStorage.getItem("doList").split(",")) || [
+  // const [doList, setDoList] = useState(
+  //   (typeof window !== "undefined" &&
+  //     localStorage.getItem("doList").split(",")) || [
+  //     "bitcoin",
+  //     "ethereum",
+  //     "iostoken",
+  //     "ripple",
+  //     "flux",
+  //   ]
+  // );
+
+  const [doList, setDoList] = useState([
       "bitcoin",
       "ethereum",
       "iostoken",
@@ -18,6 +27,22 @@ export const ContextListProvider = (props) => {
       "flux",
     ]
   );
+
+useEffect(() => {
+  if(typeof window !== "undefined") {
+    localStorage.getItem("doList").split(",")
+  }
+})
+
+  //   const [doList, setDoList] = useState(
+  //   [
+  //     "bitcoin",
+  //     "ethereum",
+  //     "iostoken",
+  //     "ripple",
+  //     "flux",
+  //   ]
+  // );
 
   useEffect(() => {
     localStorage.setItem("doList", doList);

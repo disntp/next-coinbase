@@ -47,7 +47,7 @@ const Featured = () => {
                 1000,
               ]}
               loop={Infinity}
-              wrapper="h2"
+              // wrapper="h2"
             />
             }
           </h2>

@@ -87,15 +87,25 @@ body::-webkit-scrollbar-thumb {
   outline: 1px solid slategrey;
 }
 
+/* .delete-icon {
+  display: none;
+  position: absolute;
+
+  text-align: center;
+
+  padding-top: 0rem;
+  padding-left: 7.3rem;
+
+} */
+
 .delete-icon {
   display: none;
   position: absolute;
-  /* right: 5px; */
+
   text-align: center;
-  /* padding-bottom: 25rem;
-  padding-left: 16rem; */
-  padding-top: 0rem;
-  padding-left: 7.3rem;
+
+  padding-top: 15rem;
+  
 
 }
 

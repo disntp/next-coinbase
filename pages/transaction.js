@@ -21,7 +21,7 @@ const Transaction = () => {
           Transactions
         </h1>
         </div>
-          {/* <DisplayTransaction /> */}
+          <DisplayTransaction />
       </>
     ) : (
       <ButtonWallet authenticate={authenticate} />

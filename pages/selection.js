@@ -5,6 +5,7 @@ import coinGecko from "../pages/api/coinGecko";
 import Loading from "../components/Loading";
 import AddCoin from "../components/AddCoin";
 import Head from "next/dist/shared/lib/head";
+import Script from "next/script";
 
 export default function Selection() {
   const [coins, setCoins] = useState([]);
@@ -57,6 +58,19 @@ export default function Selection() {
       <Head>
         <title>Crypto Selection</title>
       </Head>
+      {/* <Script
+              src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+              integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+              crossOrigin="anonymous"
+              strategy="lazyOnload"
+            ></Script>
+            <Script
+              src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+              crossOrigin="anonymous"
+              strategy="lazyOnload"
+            ></Script>
+            <Script src="https://kit.fontawesome.com/a076d05399.js" strategy="lazyOnload" crossOrigin="anonymous"></Script> */}
       <div>
         <div className="pt-11">
           <h1

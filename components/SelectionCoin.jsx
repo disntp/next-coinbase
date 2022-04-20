@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Loading from "./Loading";
+import {TiDelete} from 'react-icons/ti'
 
 const SelectionCoin = ({ coin, isLoading, deleteCoin }) => {
   // const [ data, setData ] = useState([])
@@ -102,14 +103,18 @@ const SelectionCoin = ({ coin, isLoading, deleteCoin }) => {
             {Math.abs(coin.price_change_percentage_24h).toFixed(2)}%
           </span>
 
-          <span>
-          <i
+          <span className="text-danger delete-icon">
+          {/* <i
             className="delete-icon fas fa-times-circle text-danger"
             onClick={(e) => {
               e.preventDefault();
               deleteCoin(coin.id);
             }}
-          ></i>
+          ></i> */}
+          <TiDelete size={20} onClick={(e) => {
+              e.preventDefault();
+              deleteCoin(coin.id);
+            }}  />
           </span>
          
         </div>
