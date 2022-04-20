@@ -7,7 +7,6 @@ import {
   useWeb3Transfer,
 } from "react-moralis";
 import Swal from "sweetalert2";
-import ButtonWallet from "../components/ButtonWallet";
 import { useRouter } from "next/router";
 
 const Balance = () => {
