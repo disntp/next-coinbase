@@ -167,7 +167,6 @@ const Balance = () => {
               onChange={(e) => {
                 if (
                   e.target.value === "" ||
-                  e.target.value === null ||
                   e.target.value === undefined
                 ) {
                   setAmount(0);

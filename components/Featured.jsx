@@ -23,7 +23,7 @@ const Featured = () => {
 
   // console.log(data)
 
-  if (!data) return null;
+  // if (!data) return null;
 
   return (
     <div className="featured">
