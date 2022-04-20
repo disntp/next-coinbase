@@ -63,11 +63,13 @@ const DisplayTransaction = () => {
                 ) : (
                   "-"
                 )} */}
-                <td>{tran.block_timestamp.split(" ")[0]
-                          .split("T")[1]
-                          .split(".")[0] +
-                          " - " +
-                          new Date(tran.block_timestamp).toDateString()}</td>
+                <td>{tran.block_timestamp
+                // .split(" ")[0]
+                          // .split("T")[1]
+                          // .split(".")[0] +
+                          // " - " +
+                          // new Date(tran.block_timestamp).toDateString()
+                          }</td>
               <th><a href={`${BASE_URL}/${tran.hash}`} target="_blank" rel="noreferrer"><SiEthereum size={30}/></a></th>
               </tr>
             ))}
