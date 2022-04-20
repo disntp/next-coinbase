@@ -6,7 +6,7 @@ import Loading from "../components/Loading";
 import AddCoin from "../components/AddCoin";
 import Head from "next/dist/shared/lib/head";
 
-export default function selection() {
+export default function Selection() {
   const [coins, setCoins] = useState([]);
   const { doList, deleteCoin } = useContext(ContextList);
   const [isLoading, setIsLoading] = useState(false);

@@ -30,14 +30,23 @@ const Featured = () => {
       <div className="container">
         {/* Left */}
         <div className="left text-white">
-          <h1 className="text-3xl">
-            Explore top Crypto's Like 
-            </h1>
+          <h1 className="text-3xl">Explore top Crypto's Like</h1>
           <h2 className="bg-gradient-to-l from-purple-500 via-fuchsia-500 to-pink-500 font-bold text-gradient drop-shadow-md text-2xl">
-          <Typical
-            steps={["Bitcoin", 1000, "Ethereum", 1000, "Litecoin", 1000, "Bitcoin Cash", 1000, " Cardano", 1000]}
-            loop={Infinity}
-            // wrapper="h5"
+            <Typical
+              steps={[
+                "Bitcoin",
+                1000,
+                "Ethereum",
+                1000,
+                "Litecoin",
+                1000,
+                "Bitcoin Cash",
+                1000,
+                " Cardano",
+                1000,
+              ]}
+              loop={Infinity}
+              wrapper="h2"
             />
           </h2>
           <p>See all available assets: Cryptocurrencies and NFT's</p>
@@ -53,7 +62,6 @@ const Featured = () => {
         <div className="right">
           <div className="card hover:animate-pulse">
             <div className="top">
-              {/* <img src={BTC} alt='/' /> */}
               <img src={data[0].image} alt="" />
             </div>
             <div>
