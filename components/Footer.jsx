@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-12 col-sm-6">
-            <a href='https://www.coinbase.com/th/price' target={'_blank'}>	&copy; Coinbase</a>
+            <a href='https://www.coinbase.com/th/price' target={'_blank'}  rel="noreferrer">	&copy; Coinbase</a>
             </div>
         </div>
       </div>
