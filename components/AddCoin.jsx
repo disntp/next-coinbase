@@ -56,7 +56,7 @@ const AddCoin = () => {
   return (
     <div className="dropdown ml-10">
       <button
-        className="btn btn-secondary dropdown-toggle" onClick={() => setIsActive(!isActive)}
+        className="dropdown-toggle bg-transparent text-white outline p-2" style={{borderRadius:"5px"}} onClick={() => setIsActive(!isActive)}
         type="button"
         id="dropdownMenuButton"
         data-toggle="dropdown"
@@ -72,8 +72,8 @@ const AddCoin = () => {
             return (
               <div key={index}>
                 <a className="dropdown-item text-gray-50 bg-neutral-900" href="#" onClick={() => handleClick(coin.id)}>
-                  <div className="row">
-                  <img src={coin.image} alt="" height={10} width={25} />{" "}
+                  <div className="flex" >
+                  <img src={coin.image} alt="" height={10} width={25}/>{" "}
                   <p className="ml-2">{coin.id}</p>
                   </div>
                 </a>
