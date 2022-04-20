@@ -25,14 +25,16 @@ export const ContextListProvider = (props) => {
       "iostoken",
       "ripple",
       "flux",
+      "cardano",
+      "solana",
     ]
   );
 
-useEffect(() => {
-  if(typeof window !== "undefined") {
-    localStorage.getItem("doList").split(",")
-  }
-})
+// useEffect(() => {
+//   if(typeof window !== "undefined") {
+//     localStorage.getItem("doList").split(",")
+//   }
+// })
 
   //   const [doList, setDoList] = useState(
   //   [
