@@ -54,10 +54,11 @@ export default function Selection() {
   //   };
 
   return (
-    <div className="uppercase items-center justify-center-cover bg-cover bg-gradient-to-t from-indigo-500 via-purple-600 to-neutral-900">
+    <div className="uppercase items-center justify-center-cover bg-cover">
       <Head>
         <title>Crypto Selection</title>
       </Head>
+      <div className="uppercase items-center justify-center-cover bg-cover bg-gradient-to-t from-indigo-500 via-purple-600 to-neutral-900 bg_selection" style={{zIndex:"0"}}></div>
       {/* <Script
               src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
               integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

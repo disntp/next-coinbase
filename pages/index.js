@@ -9,7 +9,7 @@ import { Fragment } from "react";
 
 export default function Home() {
   return (
-    <div className="mr-2 uppercase items-center w-full h-screen bg-gradient-to-b from-neutral-800 via-purple-900 to-black bg-cover">
+    <div className="mr-2 uppercase items-center w-full h-screen bg-gradient-to-b from-neutral-800 via-purple-900 to-black bg-cover" >
       <Head>
         <title>Home Page</title>
         <link rel="icon" href="/currency.png" />

@@ -19,7 +19,7 @@ const SelectionCoin = ({ coin, isLoading, deleteCoin }) => {
   return (
     <>
       <Link href={`/coins/${coin.id}`}>
-        <a style={{textDecoration: 'none'}}>
+        <a style={{textDecoration: 'none',  zIndex:"10"}}>
         {/* <li className="border-neutral-700 coinlist-item list-group-item list-group-item-action d-flex justify-content-between align-item-center justify-self-center text-white bg-neutral-800 cursor-pointer hover:bg-slate-600 coin">
           <img
             className="coinlist-image align-middle"
