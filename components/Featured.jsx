@@ -32,7 +32,8 @@ const Featured = () => {
         <div className="left text-white">
           <h1 className="text-3xl">Explore top Crypto's Like</h1>
           <h2 className="bg-gradient-to-l from-purple-500 via-fuchsia-500 to-pink-500 font-bold text-gradient drop-shadow-md text-2xl">
-            <Typical
+            {
+              <Typical
               steps={[
                 "Bitcoin",
                 1000,
@@ -48,6 +49,7 @@ const Featured = () => {
               loop={Infinity}
               wrapper="h2"
             />
+            }
           </h2>
           <p>See all available assets: Cryptocurrencies and NFT's</p>
           <Link href={"/#table"}>
