@@ -271,6 +271,12 @@ padding-bottom: 6rem;
   }
 }
 
+@media screen and (max-width: 415px) {
+  .button_wallet {
+    font-size: 15px;
+  }  
+}
+
 /* .err_content {
   display: flex;
   justify-content: center;

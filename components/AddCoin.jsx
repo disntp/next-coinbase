@@ -56,7 +56,7 @@ const AddCoin = () => {
   return (
     <div className="dropdown ml-10">
       <button
-        className="dropdown-toggle bg-transparent text-white outline p-2" style={{borderRadius:"5px"}} onClick={() => setIsActive(!isActive)}
+        className="btn btn-secondary dropdown-toggle" onClick={() => setIsActive(!isActive)}
         type="button"
         id="dropdownMenuButton"
         data-toggle="dropdown"

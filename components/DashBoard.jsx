@@ -17,7 +17,6 @@ const DashBoard = () => {
   const [image, setImage] = useState("");
   const [uploaded, setUploaded] = useState(false);
 
-
   useEffect(() => {
     if (!isAuthenticated) {
       router.push("/mint");
@@ -49,13 +48,6 @@ const DashBoard = () => {
         .send({ from: user.get("ethAddress") });
       const tokenId = response.events.Transfer.returnValues.tokenId;
 
-      // Swal.fire(
-      //   'Successfully!',
-      //   `NFT successfully minted. Contract Address: ${contractAddress} Token ID: ${tokenId}\n
-      //   <a href="https://testnets.opensea.io/assets/${contractAddress}/${tokenId}">View here</a>
-      //   `,
-      //   'success'
-      // )
       Swal.fire({
         icon: "success",
         title: "Successfully!",
@@ -88,26 +80,21 @@ const DashBoard = () => {
   };
 
   return (
-    <div className="flex w-screen h-screen items-center justify-center text-white bg-cover bg-neutral-800">
-      {/* <div className="row absolute right-10 logout-btn" style={{ top: "7rem" }}>
-        <p className="pt-3 pr-4 text-gradient bg-gradient-to-l  from-purple-400 to-pink-500 address">
-          Wallet Address: {user && user.get("ethAddress").substring(0, 6)}...{user && user.get("ethAddress").substring(user.get("ethAddress").length - 5)}
-        </p>
-        <button
-          onClick={logout}
-          className="animate-bounce bg-gradient-to-l from-indigo-500 to-pink-500 text-white text-sm p-2 rounded-3xl right-10"
-        >
-          {<FiLogOut className="ml-2" size={20} />}
-          <span>Logout</span>
-        </button>
-      </div> */}
-      <form className="mt-[3rem] pt-11 p-5" onSubmit={onSubmit} style={{paddingBottom:"1rem"}}>
-      <h1
-          // id="table"
-          className="mt-7 bg-gradient-to-l from-indigo-500 via-purple-400 to-indigo-500 py-5 text-3xl text-center font-bold text-gradient drop-shadow-md uppercase"
-        >
-          Create own NFT
-        </h1>
+    <>
+    <div className="flex flex-col items-center justify-center bg-neutral-800 text-white rounded-lg shadow-md p-6 m-16 w-full overflow-hidden sm:w-52 balance_card"  style={{ height: "15rem", width: "16rem" }}>
+      {uploaded && (
+            <div className="mt-4">
+              <img src={image.img} width={150} height={150} />
+            </div>
+          )}
+    </div>
+
+    <div className="flex flex-col items-center justify-center bg-neutral-800 text-white rounded-lg shadow-md w-full overflow-hidden sm:w-52 balance_card" style={{ height: "33rem", width: "56rem" }}>
+    <form
+        className="mt-[3rem] pt-11 p-5"
+        onSubmit={onSubmit}
+        style={{ paddingBottom: "1rem" }}
+      >
         <div className="input-with-placeholder">
           <input
             type="text"
@@ -115,7 +102,7 @@ const DashBoard = () => {
             value={name}
             id="name"
             onChange={(e) => setName(e.target.value)}
-            required 
+            required
           />
           <label htmlFor="name">Name</label>
         </div>
@@ -126,12 +113,12 @@ const DashBoard = () => {
             className="border-[1px] p-2 text-lg border-purple-500 w-full text-white"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            required 
+            required
           />
           <label htmlFor="description">Description</label>
         </div>
         <div className="mt-5">
-          <div className="input-group mb-3">
+          {/* <div className="input-group mb-3">
             <div className="input-group-prepend">
               <span className="input-group-text">Upload</span>
             </div>
@@ -147,12 +134,32 @@ const DashBoard = () => {
                 Choose file
               </label>
             </div>
+          </div> */}
+
+          <div className="flex items-center justify-center w-full">
+            <label className="flex flex-col w-full h-13 border-4 border-blue-200 border-dashed hover:bg-gray-100 hover:border-gray-300 hover:cursor-pointer">
+              <div className="flex flex-col items-center justify-center pt-4">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-5 h-5 text-gray-400 group-hover:text-gray-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+                  />
+                </svg>
+                <p className="pt-1 text-[12px] tracking-wider text-gray-400 group-hover:text-gray-600">
+                  Attach a file
+                </p>
+              </div>
+              <input type="file" className="opacity-0" onChange={handleImage} />
+            </label>
           </div>
-          {uploaded && (
-            <div className="mt-7 ml-8 pl-8">
-              <img src={image.img} width={200} height={200} />
-            </div>
-          )}
         </div>
         <button
           type="submit"
@@ -161,7 +168,8 @@ const DashBoard = () => {
           Mint
         </button>
       </form>
-    </div>
+      </div>
+    </>
   );
 };
 

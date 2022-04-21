@@ -6,14 +6,17 @@ import Loading from "../components/Loading";
 import AddCoin from "../components/AddCoin";
 import Head from "next/dist/shared/lib/head";
 import Script from "next/script";
+// import { useRouter } from "next/dist/client/router";
 
 export default function Selection() {
   const [coins, setCoins] = useState([]);
   const { doList, deleteCoin } = useContext(ContextList);
   const [isLoading, setIsLoading] = useState(false);
   let times = 500;
+  // const router = useRouter();
 
   useEffect(() => {
+    // router.reload();
     const fetchData = async () => {
       setIsLoading(true);
       const res = await coinGecko.get("/coins/markets", {
@@ -75,7 +78,6 @@ export default function Selection() {
       <div>
         <div className="pt-11">
           <h1
-            id="home"
             className="mb-8 bg-gradient-to-l from-indigo-400 via-purple-300 to-indigo-400 py-5  text-center font-bold text-gradient drop-shadow-md lg:text-5xl"
           >
             Watch Lists
