@@ -86,7 +86,7 @@ export default function Selection() {
       </div>
       <AddCoin />
       {/* {renderCoins()} */}
-      <div className="flex flex-wrap justify-center pl-4 pr-4">
+      <div className="flex flex-wrap justify-center pl-4 pr-4 pt-5">
         {coins.map((coin, index) => (
           <SelectionCoin
             coin={coin}

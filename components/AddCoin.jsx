@@ -56,7 +56,7 @@ const AddCoin = () => {
   return (
     <div className="dropdown ml-10">
       <button
-        className="btn btn-secondary dropdown-toggle" onClick={() => setIsActive(!isActive)}
+        className="px-3 py-2 rounded-xl text-white outline hover:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 dropdown-toggle" onClick={() => setIsActive(!isActive)}
         type="button"
         id="dropdownMenuButton"
         data-toggle="dropdown"
@@ -65,7 +65,7 @@ const AddCoin = () => {
       >
         Add Coin
       </button>
-      <div className={isActive ? "dropdown-menu scrollable-menu" : "dropdown-menu scrollable-menu"} aria-labelledby="dropdownMenuButton">
+      <div className={isActive ? "dropdown-menu-open scrollable-menu" : "dropdown-menu scrollable-menu"} aria-labelledby="dropdownMenuButton">
       <input className="text-white form-control bg-dark bg-cover mt-0 z-199" type="text" placeholder="Search.." id="myInput" onChange={(e) => setSearch(e.target.value)} />
         {
           filtered.map((coin,index) => {
